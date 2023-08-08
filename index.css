@@ -3,20 +3,26 @@ html, body {
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
     background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
 main {
     margin: 0 auto;
     width: 30vw;
-     background-color: #fff; 
+    min-width: 350px;
 
+}
+
+.container {
+    background-color: #C6C6C6;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
     padding: 1em 1.1em;
-    border-bottom: 3px solid #C6C6C6;
+    justify-content: space-between;
+    border-bottom: 3px solid #9f9f9f;
+    background-color: #fff;
 }
 
 header .logo  {
@@ -25,11 +31,77 @@ header .logo  {
 }
 
 header .avater-img {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
 }
 
 section {
-    
+    overflow-y: scroll;
+    background-color:#EDEDED;
+    height: 40em;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+  }
+
+section .container {
+    margin-bottom: 1.5em;
+    background-color: #fff;
+}
+
+section .post-header {
+    margin: 0 0.8em;
+    padding: 1em 0.2em 0em;
+    display: flex;
+    gap: 10px;
+}
+
+.post-header img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+.post-header p {
+    margin : 0
+}
+
+.user-info >:first-child {
+    font-weight: 900;
+}
+
+section .post-body {
+    margin: 0.8em;
+    padding: 0.2em;
+}
+/* Post Body start from here */
+section .post-body  img {
+    width: 100%;
+}
+
+.post-body .user-interraction {
+    margin-top: 0.8em;
+    display: flex;
+    gap: 10px;
+
+}
+
+.user-interraction > i {
+    font-size: 1.5rem;
+}
+
+.user-interraction i:hover,
+.user-interraction i:active {
+   color: red;
+   cursor: pointer;
+}
+
+.post-body .like-comment {
+    margin: 0.5em 0;
+}
+
+.post-body .like-comment span {
+    font-weight: 900;
 }

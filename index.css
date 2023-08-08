@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #f4f4f4;
+}
+
+main {
+    margin: 0 auto;
+    width: 30vw;
+     background-color: #fff; 
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.1em;
+    border-bottom: 3px solid #C6C6C6;
+}
+
+header .logo  {
+    width: 8em;
+    height:auto;
+}
+
+header .avater-img {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+
+section {
+    
+}

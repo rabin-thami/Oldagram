@@ -17,7 +17,7 @@ const posts = [
         comment: "i'm feelin a bit stressed tbh",
         likes: 4
     },
-        {
+    {
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
@@ -26,5 +26,52 @@ const posts = [
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
         likes: 152
     }
-]
+];
 
+const container = document.querySelector(".container");
+
+for (let i = 0; i < posts.length; i++) {
+    const post = posts[i];
+
+    const postElement = document.createElement("div");
+    postElement.className = "post";
+
+    postElement.innerHTML = `
+        <div class="post-header">
+            <img src="${post.avatar}" alt="user avater">
+            <div class="user-info">
+                <p class="name">${post.name}</p>
+                <p class="user-location">${post.location}</p>
+            </div>
+        </div>
+        <div class="post-body">
+            <img src="${post.post}" alt="${post.name}" id="userPost">
+            <div class="user-interraction">
+                <i id="likeBtn" class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+            <div class="like-comment">
+                <p class="user-like-count">${post.likes} likes</p>
+                <span class="user-name">${post.username + ' '}</span>${post.comment}
+            </div>
+        </div>
+    `;
+
+    container.appendChild(postElement);
+
+    const userPost = postElement.querySelector("#userPost");
+    const likeBtn = postElement.querySelector("#likeBtn")
+
+    userPost.addEventListener("dblclick", function() {
+        post.likes++; // Learn from google but not fully unserstand
+        const likeCountElement = postElement.querySelector(".user-like-count");
+        likeCountElement.textContent = `${post.likes} likes`; 
+    });
+
+    likeBtn.addEventListener("click", function() {
+        post.likes++; 
+        const likeCountElement = postElement.querySelector(".user-like-count");
+        likeCountElement.textContent = `${post.likes} likes`;
+    });
+}

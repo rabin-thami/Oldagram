@@ -98,10 +98,10 @@ section .post-body  img {
    cursor: pointer;
 }
 
-.post-body .like-comment {
+.like-comment {
     margin: 0.5em 0;
 }
 
-.post-body .like-comment span {
+ .like-comment .user-like-count, .user-name {
     font-weight: 900;
 }

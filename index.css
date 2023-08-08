@@ -39,7 +39,7 @@ header .avater-img {
 section {
     overflow-y: scroll;
     background-color:#EDEDED;
-    height: 40em;
+    height: 80vh;
 }
 
 section::-webkit-scrollbar {
